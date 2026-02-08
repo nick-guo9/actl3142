@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Allow directories (needed for recursion)
+!*/
+
+# Allow .tex and .pdf files
+!*.tex
+!*.pdf
+
+# Allow gitignore itself
+!.gitignore
+
+# Ignore course-resources/ entirely
+course-resources/
