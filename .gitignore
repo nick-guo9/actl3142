@@ -8,8 +8,11 @@
 !*.tex
 !*.pdf
 
+!*.csv
+
 # Allow gitignore itself
 !.gitignore
 
 # Ignore course-resources/ entirely
 course-resources/
+beamer-unsw-theme-master/
