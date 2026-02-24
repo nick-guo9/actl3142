@@ -4,10 +4,11 @@
 # Allow directories (needed for recursion)
 !*/
 
-# Allow .tex and .pdf files
-!*.tex
-!*.pdf
 
+# Allow .tex and .pdf files
+# !*.tex
+!*.pdf
+!*.R
 !*.csv
 
 # Allow gitignore itself
