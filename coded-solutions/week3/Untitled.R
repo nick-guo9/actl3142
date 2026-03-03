@@ -1,5 +1,38 @@
 library(ISLR2)
 
+df = ISLR2::Carseats
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Filler line
+
+
 fit <- lm(Sales ~ Price + Urban + US, data = Carseats)
 summary(fit)
 
@@ -12,3 +45,5 @@ confint(fit2)
 
 par(mfrow = c(2, 2))
 plot(fit2)
+
+
