@@ -1,7 +1,9 @@
-# Show the students how to navigate RStudio, tips and other stuff
+# Show how to navigate RStudio ... and shortcuts (CMD + ENTER and for windows ...)
+
 
 # Part A
-college = read.csv('College.csv')
+college = read.csv('/Users/nickguo/Documents/unsw/2026/2026T1/actl3142/data/College.csv')
+
 
 
 
