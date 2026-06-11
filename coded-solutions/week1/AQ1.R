@@ -16,13 +16,11 @@ college = read.csv('/Users/nickguo/Documents/unsw/2026/2026T1/actl3142/data/Coll
 
 
 
-
-
 # Part B
 rownames(college) <- college[, 1] # this is equivalent of index in pandas python?
 # View(college) # same as clicking on the view on the right hand side panel
 
-college <- college[, -1] # select the college data frame excluding the first column
+college <- college[ , -1] # select the college data frame excluding the first column
 # assign it back to college
 # could also input a vector to exclude multiple columns i.e. -c(2, 4)
 college$Private <- as.factor(college$Private) # turn into categorical variable
@@ -32,6 +30,11 @@ college$Private <- as.factor(college$Private) # turn into categorical variable
 
 str(college) # structure
 unique(college$Private)
+unique(college[, 'Private'])
+
+
+
+
 
 
 
@@ -44,8 +47,11 @@ unique(college$Private)
 summary(college)
 str(college) # structure
 pairs(college[ , 2:11])
+
+
 pairs(college[, 1:10])
 plot(college$Private, college$Outstate)
+plot(college$Outstate, college$Private)
 
 
 

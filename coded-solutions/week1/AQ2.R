@@ -1,9 +1,9 @@
 # Part A
-auto = read.csv('Auto.csv')
+auto = read.csv('/Users/nickguo/Documents/unsw/2026/2026T1/actl3142/data/Auto.csv')
 str(auto) # int numeric
 
 unique(auto$horsepower) # it says char what are issues here?
-auto <- read.csv("Auto.csv", na.strings = "?")
+auto <- read.csv('/Users/nickguo/Documents/unsw/2026/2026T1/actl3142/data/Auto.csv', na.strings = "?")
 auto <- na.omit(auto) # remove missing values
 
 
@@ -23,9 +23,17 @@ quant.var <- c(
   "mpg", "cylinders", "displacement", "horsepower",
   "weight", "acceleration", "year"
 )
+df[row/s, col/s]
 ranges.df <- apply(auto[, quant.var], 2, range)
 rownames(ranges.df) <- c("min", "max")
 ranges.df
+
+
+range(auto$mpg)
+range(auto$cylinders)
+range(auto$mpg)
+range(auto$mpg)
+
 
 
 
@@ -42,11 +50,11 @@ ranges.df
 # Part C
 means.df <- apply(auto[, quant.var], 2, mean)
 std.df <- apply(auto[, quant.var], 2, sd)
+
 distns.df <- rbind(means.df, std.df)
 rownames(distns.df) <- c("mean", "sd.") # adding index
 distns.df["mean", ] # using labelled indexing now in row instead of integer index
 t(distns.df) # transpose
-
 
 
 
@@ -95,7 +103,8 @@ lines(density(auto$horsepower), col = "green", lwd = 2) # Adds a smooth trend li
 
 
 
-
+model = lm(mpg ~ displacement, data = auto)
+summary(model)
 
 
 
